@@ -780,4 +780,10 @@
       color: #000000;
       font-weight: bold;
     }
+    #tech-img {
+      width: 50%;
+      height: 60%;
+      margin-top: 15%;
+      border: none;
+    }
   }
