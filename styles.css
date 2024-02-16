@@ -786,4 +786,16 @@
       margin-top: 15%;
       border: none;
     }
+    #tech-img-spe {
+      width: 35%;
+      height: 60%;
+      margin-top: 15%;
+      border: none;
+    }
+    #tech-img-mob {
+      width: 25%;
+      height: 60%;
+      margin-top: 15%;
+      border: none;
+    }
   }
