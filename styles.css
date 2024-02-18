@@ -35,6 +35,11 @@ html {
     display: none;
   }
   
+  .blog-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .mobile-nav {
     margin: 0;
     padding: 50px 0;
@@ -736,7 +741,8 @@ html {
       font-size: 20px;
     }
     
-    .blog-description {
+    .blog-item .blog-description {
+      color: #dfdfdf;
       margin-top: 10px;
       font-size: 16px;
     }
