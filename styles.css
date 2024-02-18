@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
   }
@@ -559,6 +562,7 @@
   @media (min-width: 600px) {
     body {
       background: rgb(248, 250, 248);
+      scroll-behavior: smooth;
     }
   
     .container {
@@ -738,7 +742,7 @@
     }
     
     .blog-link {
-      color: #6070ff;
+      color: #faea5e;
       text-decoration: none;
       font-weight: bold;
       margin-top: 10px;
