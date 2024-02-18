@@ -626,6 +626,12 @@
     padding: 0.5rem 1rem;
     border-radius: 10px;
    }
+    .nav-list a{
+      text-decoration: underline;
+      transition: 1.5s;
+      color: #fff7ae;
+      text-decoration: none;
+    }
     .nav-list span:hover{
       text-decoration: underline;
       transition: 1.5s;
@@ -688,7 +694,64 @@
       display: flex;
       align-items: center;
     }
+
+    section {
+      background-size: cover;
+      width: -webkit-fill-available;
+    }
+    
+    .titlee {
+      color: #FBCF8B;
+      display: flex;
+      justify-content: center;
+      font-size: xx-large;
+    }
+    
+    .blogs {
+      width: 100%;
+      display: grid;
+      padding: 2%;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    
+    .blog-item {
+      background-color: #212121;
+      border-radius: 10px;
+      padding: 20px;
+      color: white;
+    }
+    
+    .blog-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    
+    .blog-title {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    
+    .blog-description {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    
+    .blog-link {
+      color: #6070ff;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    
+    .blog-link:hover {
+      color: #384299;
+    }
   
+   .tech-title {
+      text-align: center;
+   }
     #About-Myself h1 {
       color: #FBCF8B;
     }
