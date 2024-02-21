@@ -113,6 +113,10 @@ html {
     text-align: left;
   }
   
+  .tech-img {
+    width: 60%;
+  }
+
   #text1 h1 {
     color: #FBCF8B;
     font-size: larger;
@@ -203,7 +207,8 @@ html {
     padding: 2px;
     gap: 8px;
   }
-  
+
+
   #about {
     background-color: white;
     display: flex;
@@ -220,7 +225,7 @@ html {
   }
   
   
-  
+
   .contact-form .text-container p,
   .contact-form .text-container h2 {
     color: #fff;
@@ -232,8 +237,44 @@ html {
     line-height: 28px;
     font-size: 20px;
   }
+
+  .blog-item {
+    width: 80%;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    margin: 2% auto;
+    border: 2px solid #e9d7871c;
+    border-radius: 8px;
+  }
+
+  img#tech-img.app-image {
+    width: 50%;
+    height: 55%;
+    border: none;
+    margin-top: 10%;
+  }
   
-  
+  img#tech-img-spe.app-image {
+    width: 45%;
+    height: 55%;
+    border: none;
+    margin-top: 10%;
+  }
+
+  img#tech-img-mob.app-image {
+    width: 40%;
+    height: 55%;
+    border: none;
+    margin-top: 10%;
+  }
+
+  #blog-Image {
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+  }
   
   
   #About-Myself span {
@@ -248,7 +289,6 @@ html {
     color: #396df2;
     padding: 12px;
   }
-  
   
   
   #canopy {
@@ -564,6 +604,18 @@ html {
     font-weight: bold;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
   @media (min-width: 600px) {
     body {
       background: rgb(248, 250, 248);
@@ -872,3 +924,4 @@ html {
       border: none;
     }
   }
+
