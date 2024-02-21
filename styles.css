@@ -118,7 +118,7 @@ html {
   }
 
   #text1 h1 {
-    color: #FBCF8B;
+    color: hsl(36, 93%, 76%);
     font-size: larger;
   }
   
@@ -248,6 +248,13 @@ html {
     border-radius: 8px;
   }
 
+  #work-item-techs {
+    border: 1px solid rgba(255, 254, 190, 0.24); 
+    width: 90%;
+    margin: 2% auto;
+    text-align: center;
+    border-radius: 10px;
+  }
   img#tech-img.app-image {
     width: 50%;
     height: 55%;
