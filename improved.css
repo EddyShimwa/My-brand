@@ -36,6 +36,14 @@ body {
       background-color: #212121;
   
     }
+
+    .blogs {
+      color: #d3a45d;
+    }
+
+    .blogs a {
+      color: #FBCF8B;
+    }
   
     #About-Myself p {
       width: 100% !important;
@@ -134,7 +142,6 @@ body {
       padding: 1rem;
     }
   
-  
     .techs {
       display: flex;
       flex-wrap: wrap;
@@ -150,14 +157,6 @@ body {
       border: 1px solid #fbce8b57;
       font-size: 0.9rem;
       background-color: #d3a45d3f;
-    }
-  
-    .app-description {
-      font-size: 0.9rem;
-      line-height: 1.5;
-      margin-bottom: 1rem;
-      text-align: justify;
-      color: #fff;
     }
   
     .project-buttons {
