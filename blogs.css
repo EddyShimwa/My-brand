@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #212121;
   }
   .container {
     max-width: 800px;
@@ -9,7 +10,10 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    color: #ffd341;
+    background-color: #2b2b2b;
+    
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   h1 {
     text-align: center;
@@ -22,20 +26,22 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc3f;
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: #212121;
   }
   button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color:  #aa6804;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   button:hover {
-    background-color: #0056b3;
+    background-color: #dce92a;
+    color: #000;
   }
   .blog-item {
     border: 1px solid #ccc;
