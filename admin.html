@@ -10,10 +10,7 @@
 <body>
    <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
-        <div class="side-header">
-            <h3>L<span>ogo</span></h3>
-        </div>
-        
+    
         <div class="side-content">
             <div class="profile">
                 <div class="profile-img bg-img" style="background-image: url(images/ProfilePic.jpg)"></div>
@@ -97,8 +94,7 @@
                 </div>
             </div>
         </header>
-        
-        
+       
         <main>
             
             <div class="page-header">
@@ -138,11 +134,11 @@
 
                     <div class="card">
                         <div class="card-head">
-                            <h2>$3,200</h2>
+                            <h2>20</h2>
                             <span class="las la-shopping-cart"></span>
                         </div>
                         <div class="card-progress">
-                            <small>Monthly revenue growth</small>
+                            <small>Blogs Published</small>
                             <div class="card-indicator">
                                 <div class="indicator three" style="width: 65%"></div>
                             </div>
@@ -164,33 +160,22 @@
 
                 </div>
 
+                <section class="blog-container">
+                    <h1>Add new </h1>
+                    <form id="blog-form">
+                      <input type="hidden" id="blog-id">
+                      <input type="text" id="title" placeholder="Enter title" required>
+                      <textarea id="content" placeholder="Enter content" required></textarea>
+                      <button type="submit" id="submit-button">Submit</button>
+                    </form>
+                    <button id="add-image-button" onclick="document.getElementById('image-input').click()">Add Image</button>
+                    <input type="file" id="image-input" accept="image/*">
+                    <div id="blogs-container"></div>
+                  </section>
 
-                <div class="records table-responsive">
-
-                    <div class="record-header">
-                        <div class="add">
-                            <span>Entries</span>
-                            <select name="" id="">
-                                <option value="">ID</option>
-                            </select>
-                            <button>Add record</button>
-                        </div>
-
-                        <div class="browse">
-                           <input type="search" placeholder="Search" class="record-search">
-                            <select name="" id="">
-                                <option value="">Status</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-
-                    </div>
-
-                </div>
             
             </div>
+      
             
         </main>
         

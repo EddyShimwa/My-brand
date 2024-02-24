@@ -15,6 +15,10 @@
     font-family: 'Merriweather', sans-serif;
 }
 
+body {
+    background: #212121;
+}
+
 #menu-toggle {
     display: none;
 }
@@ -90,7 +94,7 @@
     width: 80px;
     display: inline-block;
     margin: 0 auto .5rem auto;
-    border: 3px solid #899DC1;
+    border: 3px solid #fcd5829d;
 }
 
 .profile h4 {
@@ -458,16 +462,72 @@ table tbody tr {
     margin-right: .5rem;
 }
 
-.paid {
-    display: inline-block;
-    text-align: center;
-    font-weight: 600;
-    color: var(--main-color);
-    background: #e5f8ed;
-    padding: .5rem 1rem;
-    border-radius: 20px;
-    font-size: .8rem;
-}
+.blog-container {
+    /* max-width: 800px; */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .blog-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  #blog-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 600px;
+  }
+  #blog-form input[type="text"],
+  #blog-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 2%;
+  }
+  #submit-button {
+    width: fit-content;
+    height: 5vh;
+    padding: 2%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #submit-button:hover {
+    background-color: #0056b3;
+  }
+  #blogs-container {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  #add-image-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #add-image-button:hover {
+    background-color: #218838;
+  }
+  #image-input {
+    display: none;
+  }
 
 @media only screen and (max-width: 1200px) {
     .analytics {
