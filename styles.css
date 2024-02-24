@@ -13,7 +13,6 @@ html {
   }
   
   #intro {
-    background-color: white;
     display: flex;
     justify-content: center;
     padding: 114px 24px;
@@ -250,7 +249,7 @@ html {
   }
 
   .blog-item {
-    width: 94%;
+    width: 9%;
     padding: 4%;
     display: flex;
     flex-direction: column;
