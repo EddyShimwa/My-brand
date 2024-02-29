@@ -238,6 +238,10 @@ header {
     display: flex;
     align-items: center;
 }
+.user a {
+    color: #fbcf8b;
+    font-weight: bold;
+}
 
 .user div, .client-img {
     height: 40px;

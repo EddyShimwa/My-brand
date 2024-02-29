@@ -110,14 +110,26 @@ button {
 }
 
 #errorMessages {
-    background-color: red;
+    background-color: rgba(222, 25, 25, 0.342);
+    width: 15%;
     color: white;
     padding: 10px;
-    margin: 10px 0;
+    margin: 2% 0;
     border-radius: 5px;
     display: none; 
+    margin: auto;
+    text-align: center !important;
+    font-family: 'Poppins', sans-serif;
 }
 
+.error-message {
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: red; /* Moved the background color style here */
+    display: none; /* Default to not displayed */
+}
 
 @media screen and (max-width: 6000px) {
     form {
