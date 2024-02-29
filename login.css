@@ -109,8 +109,17 @@ button {
     margin-right: 4px;
 }
 
+#errorMessages {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: none; 
+}
 
-/* @media screen and (max-width: 6000px) {
+
+@media screen and (max-width: 6000px) {
     form {
         width: 90%; 
         padding: 30px 15px; 
@@ -120,4 +129,4 @@ button {
     button {
         font-size: 16px;
     }
-} */
+}

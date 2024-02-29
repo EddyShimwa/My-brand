@@ -6,6 +6,7 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="/admin.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
    <input type="checkbox" id="menu-toggle">
@@ -161,23 +162,42 @@
                 </div>
 
                 <section class="blog-container">
-                    <h1>Add new Blog</h1>
-                    <form id="blog-form">
-                      <input type="hidden" id="blog-id">
-                      <input type="text" id="title" placeholder="Enter title" required>
-                      <textarea id="content" placeholder="Enter content" required></textarea>
-                    </form>
-                    <div class="button-container">
-                        <button id="add-image-button" onclick="document.getElementById('image-input').click()">Add Image</button>
-                        <input type="file" id="image-input" accept="image/*" style="display: none;">
-                        <button type="submit" id="submit-button">Submit</button>
-                      </div>
+                    <h1>Manage Blogs</h1>
+                    <div class="blog-actions">
+                        <button id="createBlog" class="blog-button">Create New Blog</button>
+                        <button id="viewBlogs" class="blog-button">View All Blogs <i class="fas fa-arrow-down"></i>
+                        </button>
+                    </div>
                   </section>    
             </div>
       
-            
+        <!-- Modal -->
+<div id="blogModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create New Blog</h2>
+        <form id="blogForm">
+            <div class="form-group">
+                <label for="blogTitle">Blog Title</label>
+                <input type="text" id="blogTitle" name="blogTitle" placeholder="Enter Blog Title">
+            </div>
+            <div class="form-group">
+                <label for="blogImage">Blog Image</label>
+                <input type="text" id="blogImage" name="blogImage" placeholder="Enter Blog Image URL">
+            </div>
+            <div class="form-group">
+                <label for="blogDescription">Blog Description</label>
+                <textarea id="blogDescription" name="blogDescription" placeholder="Enter Blog Description"></textarea>
+            </div>
+            <button type="submit" class="submitBlog">Submit Blog</button>
+        </form>
+    </div>
+</div>
+    
         </main>
         
     </div>
+
 </body>
+<script src="/admin.js"></script>
 </html>
