@@ -1,203 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1"
+    />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/admin.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-   <input type="checkbox" id="menu-toggle">
+    <link rel="stylesheet" href="/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="menu-toggle" />
     <div class="sidebar">
-    
-        <div class="side-content">
-            <div class="profile">
-                <div class="profile-img bg-img" style="background-image: url(images/ProfilePic.jpg)"></div>
-                <h4>SHIMWA Pray Eddy</h4>
-                <small>Full-Stack Developer</small>
-            </div>
-
-            <div class="side-menu">
-                <ul>
-                    <li>
-                       <a href="" class="active">
-                            <span class="las la-home"></span>
-                            <small>Dashboard</small>
-                        </a>
-                    </li>
-                    <li>
-                       <a href="">
-                            <span class="las la-blog"></span>
-                            <small>Blogs</small>
-                        </a>
-                    </li>
-                    <li>
-                       <a href="">
-                            <span class="las la-envelope"></span>
-                            <small>Mailbox</small>
-                        </a>
-                    </li>
-                    <li>
-                       <a href="">
-                            <span class="las la-clipboard-list"></span>
-                            <small>Projects</small>
-                        </a>
-                    </li>
-                    <li>
-                       <a href="">
-                            <span class="las la-shopping-cart"></span>
-                            <small>Orders</small>
-                        </a>
-                    </li>
-                    <li>
-                       <a href="">
-                            <span class="las la-tasks"></span>
-                            <small>Tasks</small>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+      <div class="side-content">
+        <div class="profile">
+          <div
+            class="profile-img bg-img"
+            style="background-image: url(images/ProfilePic.jpg)"
+          ></div>
+          <h4>SHIMWA Pray Eddy</h4>
+          <small>Full-Stack Developer</small>
         </div>
+
+        <div class="side-menu">
+          <ul>
+            <li>
+              <a href="" class="active">
+                <span class="las la-home"></span>
+                <small>Dashboard</small>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-blog"></span>
+                <small>Blogs</small>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-envelope"></span>
+                <small>Mailbox</small>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-clipboard-list"></span>
+                <small>Projects</small>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-shopping-cart"></span>
+                <small>Orders</small>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-tasks"></span>
+                <small>Tasks</small>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    
+
     <div class="main-content">
-        
-        <header>
-            <div class="header-content">
-                <label for="menu-toggle">
-                    <span class="las la-bars"></span>
-                </label>
-                
-                <div class="header-menu">
-                    <label for="">
-                        <span class="las la-search"></span>
-                    </label>
-                    
-                    <div class="notify-icon">
-                        <span class="las la-envelope"></span>
-                        <span class="notify">4</span>
-                    </div>
-                    
-                    <div class="notify-icon">
-                        <span class="las la-bell"></span>
-                        <span class="notify">3</span>
-                    </div>
-                    
-                    <div class="user">
-                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
-                        
-                        <span class="las la-power-off"></span>
-                        <span>Logout</span>
-                    </div>
+      <header>
+        <div class="header-content">
+          <label for="menu-toggle">
+            <span class="las la-bars"></span>
+          </label>
+
+          <div class="header-menu">
+            <label for="">
+              <span class="las la-search"></span>
+            </label>
+
+            <div class="notify-icon">
+              <span class="las la-envelope"></span>
+              <span class="notify">4</span>
+            </div>
+
+            <div class="notify-icon">
+              <span class="las la-bell"></span>
+              <span class="notify">3</span>
+            </div>
+
+            <div class="user">
+              <div
+                class="bg-img"
+                style="background-image: url(img/1.jpeg)"
+              ></div>
+
+              <span class="las la-power-off"></span>
+              <span>Logout</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="page-header">
+          <h1>Dashboard</h1>
+          <small>Home / Dashboard</small>
+        </div>
+
+        <div class="page-content">
+          <div class="analytics">
+            <div class="card">
+              <div class="card-head">
+                <h2>56,200</h2>
+                <span class="las la-user-friends"></span>
+              </div>
+              <div class="card-progress">
+                <small>User activity this month</small>
+                <div class="card-indicator">
+                  <div class="indicator one" style="width: 60%"></div>
                 </div>
+              </div>
             </div>
-        </header>
-       
-        <main>
-            
-            <div class="page-header">
-                <h1>Dashboard</h1>
-                <small>Home / Dashboard</small>
-            </div>
-            
-            <div class="page-content">
-            
-                <div class="analytics">
 
-                    <div class="card">
-                        <div class="card-head">
-                            <h2>56,200</h2>
-                            <span class="las la-user-friends"></span>
-                        </div>
-                        <div class="card-progress">
-                            <small>User activity this month</small>
-                            <div class="card-indicator">
-                                <div class="indicator one" style="width: 60%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-head">
-                            <h2>25,210</h2>
-                            <span class="las la-eye"></span>
-                        </div>
-                        <div class="card-progress">
-                            <small>Page views</small>
-                            <div class="card-indicator">
-                                <div class="indicator two" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-head">
-                            <h2>20</h2>
-                            <span class="las la-shopping-cart"></span>
-                        </div>
-                        <div class="card-progress">
-                            <small>Blogs Published</small>
-                            <div class="card-indicator">
-                                <div class="indicator three" style="width: 65%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-head">
-                            <h2>400</h2>
-                            <span class="las la-envelope"></span>
-                        </div>
-                        <div class="card-progress">
-                            <small>New E-mails received</small>
-                            <div class="card-indicator">
-                                <div class="indicator four" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="card">
+              <div class="card-head">
+                <h2>25,210</h2>
+                <span class="las la-eye"></span>
+              </div>
+              <div class="card-progress">
+                <small>Page views</small>
+                <div class="card-indicator">
+                  <div class="indicator two" style="width: 80%"></div>
                 </div>
-
-                <section class="blog-container">
-                    <h1>Manage Blogs</h1>
-                    <div class="blog-actions">
-                        <button id="createBlog" class="blog-button">Create New Blog</button>
-                        <button id="viewBlogs" class="blog-button">View All Blogs <i class="fas fa-arrow-down"></i>
-                        </button>
-                    </div>
-                  </section>    
+              </div>
             </div>
-      
-        <!-- Modal -->
-<div id="blogModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Create New Blog</h2>
-        <form id="blogForm">
-            <div class="form-group">
+
+            <div class="card">
+              <div class="card-head">
+                <h2>20</h2>
+                <span class="las la-shopping-cart"></span>
+              </div>
+              <div class="card-progress">
+                <small>Blogs Published</small>
+                <div class="card-indicator">
+                  <div class="indicator three" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>400</h2>
+                <span class="las la-envelope"></span>
+              </div>
+              <div class="card-progress">
+                <small>New E-mails received</small>
+                <div class="card-indicator">
+                  <div class="indicator four" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="blog-container">
+            <h1>Manage Blogs</h1>
+            <div class="blog-actions">
+              <button id="createBlog" class="blog-button">
+                Create New Blog
+              </button>
+              <button id="viewBlogs" class="blog-button">
+                View All Blogs <i class="fas fa-arrow-down"></i>
+              </button>
+            </div>
+           
+            <div class="blog-list-container">
+                <hr>
+              <div class="blog-list">
+                <h2>All Blogs</h2>
+                <div class="blog-entry">
+                  <span class="blog-title">Blog Title Here</span>
+                  <div class="blog-actions">
+                    <button class="edit-blog">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="update-blog">
+                      <i class="fas fa-upload"></i>
+                    </button>
+                    <button class="delete-blog">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="blogModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Create New Blog</h2>
+            <form id="blogForm">
+              <div class="form-group">
                 <label for="blogTitle">Blog Title</label>
-                <input type="text" id="blogTitle" name="blogTitle" placeholder="Enter Blog Title">
-            </div>
-            <div class="form-group">
+                <input
+                  type="text"
+                  id="blogTitle"
+                  name="blogTitle"
+                  placeholder="Enter Blog Title"
+                />
+              </div>
+              <div class="form-group">
                 <label for="blogImage">Blog Image</label>
-                <input type="text" id="blogImage" name="blogImage" placeholder="Enter Blog Image URL">
-            </div>
-            <div class="form-group">
+                <input
+                  type="text"
+                  id="blogImage"
+                  name="blogImage"
+                  placeholder="Enter Blog Image URL"
+                />
+              </div>
+              <div class="form-group">
                 <label for="blogDescription">Blog Description</label>
-                <textarea id="blogDescription" name="blogDescription" placeholder="Enter Blog Description"></textarea>
-            </div>
-            <button type="submit" class="submitBlog">Submit Blog</button>
-        </form>
+                <textarea
+                  id="blogDescription"
+                  name="blogDescription"
+                  placeholder="Enter Blog Description"
+                ></textarea>
+              </div>
+              <button type="submit" class="submitBlog">Submit Blog</button>
+            </form>
+          </div>
+        </div>
+      </main>
     </div>
-</div>
-    
-        </main>
-        
-    </div>
-
-</body>
-<script src="/admin.js"></script>
+  </body>
+  <script src="/admin.js"></script>
 </html>

@@ -337,7 +337,6 @@ main {
     background: #fbcf8b;
 }
 
-
 .blog-container {
     width: 100%;
     margin: auto;
@@ -355,7 +354,7 @@ main {
   .blog-actions {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 5px 0;
 }
 
 .blog-button {
@@ -373,43 +372,40 @@ main {
     background-color: #c7b82e; 
 }
  
-
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    backdrop-filter: blur(8px);
+    width: 100%; 
+    height: 100%;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(3px);
 }
 
-/* Modal Content */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #171717;
+    margin: 10% auto; 
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    border: 1px solid #f0c83844;
+    width: 40%; 
     border-radius: 10px;
+    color: #edbc34;
 }
 
-/* The Close Button */
-.close {
-    color: #aaa;
+
+#closeModal {
+    color: #e9cc89;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
+#closeModal:hover,
+#closeModal:focus {
+    color: rgb(241, 161, 0);
     text-decoration: none;
     cursor: pointer;
 }
@@ -429,14 +425,17 @@ textarea {
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
-    border: 1px solid #ddd;
-    box-sizing: border-box; /* Make sure the box-sizing is set */
+    border: 1px solid #ebba2620;
+    box-sizing: border-box; 
+    color: white;
+    background-color: rgb(45, 45, 45);
 }
 
 button.submitBlog {
-    background-color: #4CAF50; /* Green */
-    color: white;
+    background-color: #f6cb3d;
+    color: rgb(0, 0, 0);
     padding: 14px 20px;
+    font-weight: bold;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
@@ -444,8 +443,70 @@ button.submitBlog {
 }
 
 button.submitBlog:hover {
-    background-color: #45a049;
+    background-color: #f5e559;
 }
+
+.blog-list {
+    border: 1px solid #4f4f4fd3;
+    width: 60%;
+    margin: auto;
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-list h2 {
+    color: #f5e559;
+    padding: 1% 0;
+}
+
+.blog-container hr {
+    border: 1px solid #54505050;
+    width: 100%;
+    margin: 1% 0;
+}
+
+.blog-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    border: 1px solid #efb4362b;
+    color: rgb(255, 214, 126);
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding: 1%;
+    margin-bottom: 2%;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.blog-title {
+    font-weight: bold;
+    flex-grow: 1; 
+}
+
+.blog-actions {
+    
+}
+
+.blog-actions button {
+    padding: 5px 10px;
+    margin: 0 5px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0; 
+}
+
+
+.edit-blog { background-color: #ffc107; }
+.update-blog { background-color: #007bff; } 
+.delete-blog { background-color: #dc3545; }
 
 
 @media only screen and (max-width: 1200px) {
