@@ -144,7 +144,7 @@
 
             <div class="card">
               <div class="card-head">
-                <h2>20</h2>
+                <h2 id="blogs-count"></h2>
                 <span class="las la-shopping-cart"></span>
               </div>
               <div class="card-progress">
@@ -176,7 +176,7 @@
                 Create New Blog
               </button>
               <button id="viewBlogs" class="blog-button">
-                View All Blogs <i class="fas fa-arrow-down"></i>
+                View All Blogs <i class="fas fa-angle-down" id="arrowIcon" ></i>
               </button>
             </div>
            
@@ -185,19 +185,6 @@
               <div class="blog-list">
                 <h2>All Blogs</h2>
                 <div class="blog-entry">
-                  <span class="blog-title">Blog Title Here</span>
-                  <div class="blog-actions">
-                    <button class="edit-blog">
-                      <i class="fas fa-edit"></i>
-                    </button>
-                    <button class="update-blog">
-                      <i class="fas fa-upload"></i>
-                    </button>
-                    <button class="delete-blog">
-                      <i class="fas fa-trash"></i>
-                    </button>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
@@ -215,6 +202,7 @@
                   id="blogTitle"
                   name="blogTitle"
                   placeholder="Enter Blog Title"
+                  required
                 />
               </div>
               <div class="form-group">
@@ -241,5 +229,7 @@
       </main>
     </div>
   </body>
-  <script src="/admin.js"></script>
+  <script src="./admin.js"></script>
+  <script src="./Blogs.js"></script>
+
 </html>

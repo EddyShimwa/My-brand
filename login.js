@@ -35,5 +35,12 @@ document.addEventListener("DOMContentLoaded", function() {
         if(!username && !password) {
             displayErrorMessage("Please enter a username and password.");
         }
+
+       if (username === "admin" && password === "password") {
+            window.location.href = "admin.html";
+        } else {
+            displayErrorMessage("Invalid username or password.");
+        }
+
     });
 });
