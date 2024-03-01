@@ -70,40 +70,82 @@ document.addEventListener("DOMContentLoaded", () => {
       blogs.push(blogObj);
 
       localStorage.setItem("blogs", JSON.stringify(blogs));
-      blogForm.reset();
+      blogForm.reset(); 
+      // Reset the form and close the modal
+      modal.style.display = "none";
       console.log("Blog saved:", blogObj);
         loadBlogs();
     }
   });
 
-    //loading blogs
-     const loadBlogs = () => {
-        const blogList = document.querySelector('.blog-list');
-        blogList.innerHTML = ''; 
-        const blogsCount = document.getElementById('blogs-count');
-        
-        const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
-       
-        blogsCount.textContent = blogs.length;
-        blogs.forEach((blog, index) => {
-            const blogEntry = document.createElement('div');
-            blogEntry.className = 'blog-entry';
-            blogEntry.innerHTML = `
-                <span class="blog-title">${blog.title}</span>
-                <div class="blog-actions">
-                    <button onclick="editBlog(${index})"><i class="fas fa-edit"></i></button>
-                    <button onclick="deleteBlog(${index})"><i class="fas fa-trash"></i></button>
-                </div>
-            `;
-            blogList.appendChild(blogEntry);
-        });
-    }
-    
 
+
+    //loading blogs
+const loadBlogs = () => {
+  const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+  const blogList = document.querySelector('.blog-list');
+  blogList.innerHTML = ''; 
+
+  blogs.forEach((blog, index) => {
+      const blogEntry = document.createElement('div');
+      blogEntry.className = 'blog-entry';
+      blogEntry.innerHTML = `
+          <span class="blog-title">${blog.title}</span>
+          <div class="blog-actions">
+              <button class="edit-blog-btn"><i class="fas fa-edit"></i></button>
+              <button class="delete-blog-btn"><i class="fas fa-trash"></i></button>
+          </div>
+      `;
+
+      blogList.appendChild(blogEntry);
+
+      const editBtn = blogEntry.querySelector('.edit-blog-btn');
+      const deleteBtn = blogEntry.querySelector('.delete-blog-btn');
+
+      editBtn.addEventListener('click', () => editBlog(index));
+      deleteBtn.addEventListener('click', () => deleteBlog(index));
+  });
+};
+
+    
+    function editBlog(index) {
+
+      const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+      const blog = blogs[index];
+
+      document.getElementById("blogTitle").value = blog.title;
+      document.getElementById("blogImage").value = blog.image;
+      document.getElementById("blogDescription").value = blog.description;
+
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
+  
+      blogForm.onsubmit = function(event) {
+          event.preventDefault();
+          blog.title = document.getElementById("blogTitle").value.trim();
+          blog.image = document.getElementById("blogImage").value.trim();
+          blog.description = document.getElementById("blogDescription").value.trim();
+  
+          blogs[index] = blog;
+          localStorage.setItem("blogs", JSON.stringify(blogs));
+          loadBlogs();
+
+          // Reset the form and close the modal
+          blogForm.reset();
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";   
+      };
+  }
+  
+  function deleteBlog(index) {
+      const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+      blogs.splice(index, 1); 
+
+      localStorage.setItem("blogs", JSON.stringify(blogs));
+      loadBlogs();
+  }
 
     loadBlogs();
-
 });
 
-module.exports = { loadBlogs }
 

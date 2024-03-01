@@ -9,23 +9,30 @@
 </head>
 <body>
 
-
     <form id="loginForm">
-        <h3>Login Here</h3>
+        <h3>Sign Up</h3>
 
         <label for="username">Username</label>
         <input type="text" placeholder="Email or Phone" id="username">
 
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
-
-        <a href="index.html"><button id="login">Log In</button></a>
+        
+        
+        <label for="password">Confirm Password</label>
+        <input type="password" placeholder="Password" id="password">
+        <a href="index.html"><button id="login">Sign Up</button></a>
+        <div class="already">
+            <p>Already have an account? </p>
+            <a href="login.html">Log In</a>
+        </div>
         <div class="social">
           <div class="go"><i class="fab fa-google"></i></div>
           <div class="fb"><i class="fab fa-facebook"></i></div>
         </div>
     </form>
-    <div id="errorMessages" class="error-message" style="margin-top: 50px"></div>
+
+    <div id="errorMessages" class="error-message"></div>
     <script src="./login.js"></script>
 </body>
 </html>

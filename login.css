@@ -122,15 +122,35 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
+.already {
+    display: flex;
+    align-items: center;
+}
+.already p {
+    margin: 0;
+    margin-right:12px;
+}
+.already a {
+    color: #fbcf8b;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 600;
+}
+
 .error-message {
     color: white;
     padding: 10px;
     margin-top: 15px;
     border-radius: 5px;
-    background-color: red; /* Moved the background color style here */
-    display: none; /* Default to not displayed */
+    background-color: red; 
+    display: none; 
+    
 }
 
+.input-error {
+    border: 2px solid rgba(240, 13, 13, 0.581);
+    animation: shake 0.1s;
+}
 @media screen and (max-width: 6000px) {
     form {
         width: 90%; 

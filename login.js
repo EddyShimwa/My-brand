@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!username) {
             errorMessage += "Username is required.<br>";
             validationPassed = false;
+            document.getElementById("username").classList.add("input-error");
         }
 
         if (!password) {
             errorMessage += "Password is required.<br>";
             validationPassed = false;
+            document.getElementById("password").classList.add("input-error");
         }
 
         if (!validationPassed) {
@@ -33,13 +35,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if(!username && !password) {
-            displayErrorMessage("Please enter a username and password.");
+            displayErrorMessage("please fill missing fields!");
+            //highlight the fields
+            document.getElementById("username").classList.add("input-error");
+            document.getElementById("password").classList.add("input-error");
         }
-
-       if (username === "admin" && password === "password") {
-            window.location.href = "admin.html";
-        } else {
-            displayErrorMessage("Invalid username or password.");
+        if(formIsValid) {
         }
 
     });
