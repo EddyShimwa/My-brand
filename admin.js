@@ -78,8 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
-
     //loading blogs
 const loadBlogs = () => {
   const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
