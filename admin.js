@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const viewBlogs = document.getElementById("viewBlogs");
     const blogList = document.querySelector('.blog-list-container');
     const arrowIcon = document.getElementById('arrowIcon');
-   
+    
 
     blogList.style.display = "none";
    
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     
     //Form for adding a new blog & validation
-    const blogForm = document.getElementById("blogForm");
+  const blogForm = document.getElementById("blogForm");
 
   blogForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -83,6 +83,9 @@ const loadBlogs = () => {
   const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
   const blogList = document.querySelector('.blog-list');
   blogList.innerHTML = ''; 
+  const blogsCount = document.getElementById('blogs-count');
+
+  blogs.length === 0 ? blogsCount.innerText = '0' : blogsCount.innerText = blogs.length;
 
   blogs.forEach((blog, index) => {
       const blogEntry = document.createElement('div');
@@ -126,12 +129,11 @@ const loadBlogs = () => {
   
           blogs[index] = blog;
           localStorage.setItem("blogs", JSON.stringify(blogs));
-          loadBlogs();
-
           // Reset the form and close the modal
           blogForm.reset();
           modal.style.display = "none";
           document.body.style.overflow = "auto";   
+          loadBlogs();
       };
   }
   
