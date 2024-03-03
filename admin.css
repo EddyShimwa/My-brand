@@ -460,7 +460,24 @@ button.submitBlog:hover {
     align-items: center;
     min-height: 5%;
     max-height: 20vh;
-    overflow-y: hidden;
+    overflow-y: scroll;
+}
+
+/* Change the scrollbar color */
+.blog-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.blog-list::-webkit-scrollbar-track {
+    background: #c7c7c7;
+}
+
+.blog-list::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+}
+
+.blog-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .blog-list h2 {
