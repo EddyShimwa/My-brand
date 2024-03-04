@@ -79,7 +79,8 @@ html {
   }
 
   #login-nav-link {
-    background-color: #f5e559;
+    background-color: #202020;
+    border: 1px solid #f5e559;
     padding: 2%;
     width: fit-content;
   color: #000000;
@@ -674,6 +675,9 @@ html {
       border-color: #6070ff;
     }
   
+    #my-logo {
+      font-size: 24px;
+    }
     nav {
       margin: 0;
       padding: 0;
@@ -701,10 +705,12 @@ html {
       transition: background-color 0.3s ease, color 0.3s ease;
     }
    #login {
-    background-color: #f5e559;
-    color: #000000;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
+    background-color: #202020;
+    border: 1px solid #f5e5595f;
+    color: #ffea9c;
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
    }
     .nav-list a{
       text-decoration: underline;
