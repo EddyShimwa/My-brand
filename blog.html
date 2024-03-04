@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Page</title>
+<link rel="stylesheet" href="blogs.css">
+
+</head>
+<body>
+<div class="container">
+  <h1>Blog Page</h1>
+  <form id="blog-form">
+    <input type="hidden" id="blog-id">
+    <input type="text" id="title" placeholder="Enter title" required>
+    <textarea id="content" placeholder="Enter content" required></textarea>
+    <button type="submit" id="submit-button">Submit</button>
+  </form>
+  <div id="blogs-container"></div>
+</div>
+
+<script src="./blogs.js"></script>
+</body>
+</html>
