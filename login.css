@@ -123,17 +123,24 @@ button {
 }
 
 .already {
+    margin-top: 2%;
     display: flex;
     align-items: center;
+    width: 100%;
+
 }
 .already p {
-    margin: 0;
+    display: flex;
+    align-items: center;
+    margin: auto;
     margin-right:12px;
+    color: #ababab;
 }
 .already a {
-    color: #fbcf8b;
+    margin: auto;
+    color: #efb967;
     text-decoration: none;
-    font-size: larger;
+    font-size: 16px;
     font-weight: 600;
 }
 

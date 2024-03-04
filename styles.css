@@ -34,11 +34,8 @@ html {
   .nav-list {
     display: none;
   }
-  
-  .blog-actions {
-    display: flex;
-    justify-content: space-between;
-  }
+
+
 
   .mobile-nav {
     margin: 0;
@@ -249,15 +246,26 @@ html {
   }
 
   .blog-item {
-    width: 9%;
-    padding: 4%;
+    position: relative; 
+    background-color: #212121;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    padding-bottom: 80px; 
     display: flex;
-    flex-direction: column;
-    margin: 2% auto;
-    border: 2px solid #e9d7871c;
-    border-radius: 8px;
+    flex-direction: column; 
+    justify-content: space-between; 
   }
-
+  
+  .blog-actions {
+  
+    display: flex;
+    justify-content: space-between;
+    bottom: 20px; 
+    left: 20px; 
+    width: calc(100% - 40px); 
+  }
+  
   #work-item-techs {
     border: 1px solid rgba(255, 254, 190, 0.24); 
     width: 90%;
@@ -298,15 +306,7 @@ html {
     border: none;
     margin-top: 10%;
   }
-
-  #blog-Image {
-    margin: auto;
-    width: 80%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  
-  
+ 
   #About-Myself span {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -719,7 +719,6 @@ html {
   
     .mobile-navbar {
       display: none;
-      
     }
   
     .hamburger {
@@ -803,9 +802,15 @@ html {
     }
     
     .blog-item img {
-      width: 100%;
+      width: 300px; 
+      height: 200px; 
       border-radius: 10px;
+      object-fit: cover; /* Resize the image to cover the container, cropping it if necessary */
+      display: block; 
+      margin-left: auto; 
+      margin-right: auto;
     }
+    
     
     .blog-title {
       margin-top: 10px;

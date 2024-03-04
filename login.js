@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const loginForm = document.getElementById("loginForm");
+    const form = document.getElementById("loginForm");
     const errorMessagesDiv = document.getElementById("errorMessages");
 
     function displayErrorMessage(errorMessage) {
@@ -7,10 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
         errorMessagesDiv.style.display = "block";  
     }
 
-    loginForm.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function(event) {
         event.preventDefault(); 
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword") ? document.getElementById("confirmPassword").value : null;
+        const isSignUp = confirmPassword !== null; 
 
         let validationPassed = true;
         let errorMessage = "";
@@ -27,21 +29,34 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("password").classList.add("input-error");
         }
 
+        if (isSignUp && password !== confirmPassword) {
+            errorMessage += "Passwords do not match.<br>";
+            validationPassed = false;
+            document.getElementById("password").classList.add("input-error");
+            document.getElementById("confirmPassword").classList.add("input-error");
+        }
+
         if (!validationPassed) {
             displayErrorMessage(errorMessage);
+            return; 
+        }
+
+        if (isSignUp) {
+            const users = JSON.parse(localStorage.getItem('users')) || {};
+            if (users[username]) {
+                displayErrorMessage("Username already exists.<br>");
+                return;
+            }
+            users[username] = password;
+            localStorage.setItem('users', JSON.stringify(users));
+            window.location.href = "index.html";  
         } else {
-            errorMessagesDiv.style.display = "none"; 
-            console.log("Form submitted");
+            const users = JSON.parse(localStorage.getItem('users')) || {};
+            if (users[username] === password || (username === "admin" && password === "admin")) {
+                window.location.href = username === "admin" ? "admin.html" : "index.html";
+            } else {
+                displayErrorMessage("Invalid username or password.<br>");
+            }
         }
-
-        if(!username && !password) {
-            displayErrorMessage("please fill missing fields!");
-            //highlight the fields
-            document.getElementById("username").classList.add("input-error");
-            document.getElementById("password").classList.add("input-error");
-        }
-        if(formIsValid) {
-        }
-
     });
-});
+});   

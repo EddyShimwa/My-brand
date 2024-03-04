@@ -42,4 +42,54 @@ function typeWriter(text, index) {
 
 typeWriter(textToType, 0);
 
+window.onload = function() {
+  const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+  const blogsContainer = document.querySelector('.blogs');
+
+  blogs.forEach(blog => {
+      const blogItem = document.createElement('div');
+      blogItem.classList.add('blog-item');
+
+      const blogImage = document.createElement('img');
+      blogImage.src = blog.image;
+      blogImage.alt = 'Blog Image';
+      blogImage.id = 'blog-Image';
+
+      const blogTitle = document.createElement('h3');
+      blogTitle.classList.add('blog-title');
+      blogTitle.textContent = blog.title;
+
+      const blogDescription = document.createElement('p');
+      blogDescription.classList.add('blog-description');
+      blogDescription.textContent = blog.description;
+
+      const blogActions = document.createElement('div');
+      blogActions.classList.add('blog-actions');
+
+      const commentButton = document.createElement('span');
+      commentButton.classList.add('comment-button');
+      commentButton.innerHTML = '<i class="fas fa-comment"> 5</i>';
+
+      const likeButton = document.createElement('span');
+      likeButton.classList.add('like-button');
+      likeButton.innerHTML = '<i class="fas fa-heart"> 23</i>';
+
+      blogActions.appendChild(commentButton);
+      blogActions.appendChild(likeButton);
+
+      const blogLink = document.createElement('a');
+      blogLink.href = 'https://medium.com/@shimwaprayeddy';
+      blogLink.classList.add('blog-link');
+      blogLink.textContent = 'Read More';
+
+      blogItem.appendChild(blogImage);
+      blogItem.appendChild(blogTitle);
+      blogItem.appendChild(blogDescription);
+      blogItem.appendChild(blogActions);
+      blogItem.appendChild(blogLink);
+
+      blogsContainer.appendChild(blogItem);
+  });
+}
+
 
