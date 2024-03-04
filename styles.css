@@ -793,6 +793,13 @@ html {
       gap: 1rem;
     }
 
+
+    #no-blogs-message {
+      display: flex;
+      width: 100%;
+     margin: auto;
+     text-align: center;
+    }
     .blog-title{
       margin-bottom: 0;
     }

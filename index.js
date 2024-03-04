@@ -41,67 +41,72 @@ function typeWriter(text, index) {
 }
 
 typeWriter(textToType, 0);
-
 window.onload = function() {
   const blogs = JSON.parse(localStorage.getItem('blogs')) || [];            
   const blogsContainer = document.querySelector('.blogs');
 
-  blogs.forEach(blog => {
-      const blogItem = document.createElement('div');
-      blogItem.classList.add('blog-item');
-      blogItem.style.height = '500px'; 
+  if (blogs.length === 0) {
+    const noBlogsMessage = document.getElementById('no-blogs-message');
+    noBlogsMessage.style.display = 'block';
 
-      const blogImage = document.createElement('img');
-      blogImage.src = blog.image;
-      blogImage.alt = 'Blog Image';
-      blogImage.id = 'blog-Image';
-      blogImage.style.width = '300px'; 
-      blogImage.style.height = '200px'; 
-      blogImage.style.objectFit = 'cover'; 
+  } else {
+    blogs.forEach(blog => {
+      const noBlogsMessage = document.getElementById('no-blogs-message');
+        const blogItem = document.createElement('div');
+        blogItem.classList.add('blog-item');
+        blogItem.style.height = '500px'; 
+        noBlogsMessage.style.display = 'none';
+        const blogImage = document.createElement('img');
+        blogImage.src = blog.image;
+        blogImage.alt = 'Blog Image';
+        blogImage.id = 'blog-Image';
+        blogImage.style.width = '300px'; 
+        blogImage.style.height = '200px'; 
+        blogImage.style.objectFit = 'cover'; 
 
-      const blogTitle = document.createElement('h3');
-      blogTitle.classList.add('blog-title');
-      blogTitle.textContent = blog.title;
+        const blogTitle = document.createElement('h3');
+        blogTitle.classList.add('blog-title');
+        blogTitle.textContent = blog.title;
 
-      const blogDescription = document.createElement('p');
-      blogDescription.classList.add('blog-description');
-      blogDescription.textContent = blog.description.length > 200 ? blog.description.substring(0, 100) + '...' : blog.description; 
-      blogDescription.style.width = '400px'; 
-      blogDescription.style.marginTop = 0;
-      blogDescription.style.wordWrap = 'break-word'; 
+        const blogDescription = document.createElement('p');
+        blogDescription.classList.add('blog-description');
+        blogDescription.textContent = blog.description.length > 200 ? blog.description.substring(0, 100) + '...' : blog.description; 
+        blogDescription.style.width = '400px'; 
+        blogDescription.style.wordWrap = 'break-word'; 
 
-      const blogActions = document.createElement('div');
-      blogActions.classList.add('blog-actions');
+        const blogActions = document.createElement('div');
+        blogActions.classList.add('blog-actions');
 
-      const commentButton = document.createElement('span');
-      commentButton.classList.add('comment-button');
-      commentButton.innerHTML = '<i class="fas fa-comment"> 5</i>';
+        const commentButton = document.createElement('span');
+        commentButton.classList.add('comment-button');
+        commentButton.innerHTML = '<i class="fas fa-comment"> 5</i>';
 
-      const likeButton = document.createElement('span');
-      likeButton.classList.add('like-button');
-      let likesCount = 0;
-      likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount}</i>`;
-      likeButton.addEventListener('click', () => {
-        likesCount++;
+        const likeButton = document.createElement('span');
+        likeButton.classList.add('like-button');
+        let likesCount = 23;
         likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount}</i>`;
-      });
+        likeButton.addEventListener('click', () => {
+          likesCount++;
+          likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount}</i>`;
+        });
 
-      blogActions.appendChild(commentButton);
-      blogActions.appendChild(likeButton);
+        blogActions.appendChild(commentButton);
+        blogActions.appendChild(likeButton);
 
-      const blogLink = document.createElement('a');
-      blogLink.href = 'https://medium.com/@shimwaprayeddy';
-      blogLink.classList.add('blog-link');
-      blogLink.textContent = 'Read More';
+        const blogLink = document.createElement('a');
+        blogLink.href = 'https://medium.com/@shimwaprayeddy';
+        blogLink.classList.add('blog-link');
+        blogLink.textContent = 'Read More';
 
-      blogItem.appendChild(blogImage);
-      blogItem.appendChild(blogTitle);
-      blogItem.appendChild(blogDescription);
-      blogItem.appendChild(blogActions);
-      blogItem.appendChild(blogLink);
+        blogItem.appendChild(blogImage);
+        blogItem.appendChild(blogTitle);
+        blogItem.appendChild(blogDescription);
+        blogItem.appendChild(blogActions);
+        blogItem.appendChild(blogLink);
 
-      blogsContainer.appendChild(blogItem);
-  });
+        blogsContainer.appendChild(blogItem);
+    });
+  }
 }
 
 
