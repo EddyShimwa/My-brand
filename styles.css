@@ -787,15 +787,18 @@ html {
     }
     
     .blogs {
-      width: 100%;
       display: grid;
-      padding: 2%;
+      padding: 2%; 
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
+
+    .blog-title{
+      margin-bottom: 0;
+    }
     
     .blog-item {
-      background-color: #212121;
+      background-color: #2a2a2a;
       border-radius: 10px;
       padding: 20px;
       color: white;
@@ -810,7 +813,6 @@ html {
       margin-left: auto; 
       margin-right: auto;
     }
-    
     
     .blog-title {
       margin-top: 10px;

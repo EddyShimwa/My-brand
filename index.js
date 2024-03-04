@@ -43,17 +43,21 @@ function typeWriter(text, index) {
 typeWriter(textToType, 0);
 
 window.onload = function() {
-  const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+  const blogs = JSON.parse(localStorage.getItem('blogs')) || [];            
   const blogsContainer = document.querySelector('.blogs');
 
   blogs.forEach(blog => {
       const blogItem = document.createElement('div');
       blogItem.classList.add('blog-item');
+      blogItem.style.height = '500px'; 
 
       const blogImage = document.createElement('img');
       blogImage.src = blog.image;
       blogImage.alt = 'Blog Image';
       blogImage.id = 'blog-Image';
+      blogImage.style.width = '300px'; 
+      blogImage.style.height = '200px'; 
+      blogImage.style.objectFit = 'cover'; 
 
       const blogTitle = document.createElement('h3');
       blogTitle.classList.add('blog-title');
@@ -61,7 +65,10 @@ window.onload = function() {
 
       const blogDescription = document.createElement('p');
       blogDescription.classList.add('blog-description');
-      blogDescription.textContent = blog.description;
+      blogDescription.textContent = blog.description.length > 200 ? blog.description.substring(0, 100) + '...' : blog.description; 
+      blogDescription.style.width = '400px'; 
+      blogDescription.style.marginTop = 0;
+      blogDescription.style.wordWrap = 'break-word'; 
 
       const blogActions = document.createElement('div');
       blogActions.classList.add('blog-actions');
@@ -72,7 +79,12 @@ window.onload = function() {
 
       const likeButton = document.createElement('span');
       likeButton.classList.add('like-button');
-      likeButton.innerHTML = '<i class="fas fa-heart"> 23</i>';
+      let likesCount = 0;
+      likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount}</i>`;
+      likeButton.addEventListener('click', () => {
+        likesCount++;
+        likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount}</i>`;
+      });
 
       blogActions.appendChild(commentButton);
       blogActions.appendChild(likeButton);
