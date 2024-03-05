@@ -54,6 +54,7 @@ window.onload = function() {
       const noBlogsMessage = document.getElementById('no-blogs-message');
         const blogItem = document.createElement('div');
         blogItem.classList.add('blog-item');
+        blogItem.classList.add('fade-in');
         blogItem.style.height = '500px'; 
         noBlogsMessage.style.display = 'none';
         const blogImage = document.createElement('img');
@@ -82,7 +83,6 @@ window.onload = function() {
         commentsCounter = 0;
 
         commentButton.innerHTML = `<i class="fas fa-comment">${commentsCounter} </i>`;
-        
         const likeButton = document.createElement('span');
         likeButton.classList.add('like-button');
         let likesCount = 0;
@@ -104,9 +104,32 @@ window.onload = function() {
         blogActions.appendChild(likeButton);
 
         const blogLink = document.createElement('a');
-        blogLink.href = 'https://medium.com/@shimwaprayeddy';
+        blogLink.href = '#';
         blogLink.classList.add('blog-link');
         blogLink.textContent = 'Read More';
+
+        const modal = document.getElementById('myModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const close = document.getElementsByClassName('close')[0];
+
+blogLink.addEventListener('click', function(event) {
+  event.preventDefault(); 
+
+  modal.style.display = 'block';
+  modalTitle.textContent = blog.title;
+  modalDescription.textContent = blog.description;
+
+  close.onclick = function() {
+    modal.style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+});
 
         blogItem.appendChild(blogImage);
         blogItem.appendChild(blogTitle);
