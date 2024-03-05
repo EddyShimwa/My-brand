@@ -21,10 +21,10 @@ html {
   }
   
   #logo {
-    color: #c9c9ef;
+    color: #ffde5a;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 30px;
   }
   
   a {
@@ -701,10 +701,11 @@ html {
       transition: background-color 0.3s ease, color 0.3s ease;
     }
    #login {
-    background-color: #f5e559;
-    color: #000000;
-    padding: 0.5rem 1rem;
+    background-color: #0b0b0b8a;
+    color: #ffedc6;
+    padding: 0.5rem 1.5rem;
     border-radius: 10px;
+    border: 1px solid #ffe37179;
    }
     .nav-list a{
       text-decoration: underline;

@@ -60,7 +60,7 @@ window.onload = function() {
         blogImage.src = blog.image;
         blogImage.alt = 'Blog Image';
         blogImage.id = 'blog-Image';
-        blogImage.style.width = '300px'; 
+        blogImage.style.width = '350px'; 
         blogImage.style.height = '200px'; 
         blogImage.style.objectFit = 'cover'; 
 
@@ -79,15 +79,23 @@ window.onload = function() {
 
         const commentButton = document.createElement('span');
         commentButton.classList.add('comment-button');
-        commentButton.innerHTML = '<i class="fas fa-comment"> 5</i>';
+        commentsCounter = 0;
 
+        commentButton.innerHTML = `<i class="fas fa-comment">${commentsCounter} </i>`;
+        
         const likeButton = document.createElement('span');
         likeButton.classList.add('like-button');
-        let likesCount = 23;
-        likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount}</i>`;
+        let likesCount = 0;
+        let hasLiked = false; 
+        likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount} </i>`;
         likeButton.addEventListener('click', () => {
-          likesCount++;
-          likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount}</i>`;
+          if (hasLiked) {
+            likesCount--;
+          } else {
+            likesCount++;
+          }
+          hasLiked = !hasLiked;
+          likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount} </i>`;
         });
 
         blogActions.appendChild(commentButton);
