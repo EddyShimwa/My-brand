@@ -89,12 +89,14 @@ window.onload = function() {
         let hasLiked = false; 
         likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount} </i>`;
         likeButton.addEventListener('click', () => {
+          likeButton.style.color = hasLiked ? '#fff' : 'red';
           if (hasLiked) {
             likesCount--;
           } else {
             likesCount++;
           }
           hasLiked = !hasLiked;
+          likeButton.classList.add('animate-like');
           likeButton.innerHTML = `<i class="fas fa-heart"> ${likesCount} </i>`;
         });
 

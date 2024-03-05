@@ -840,6 +840,14 @@ html {
       margin-top: 10px;
       display: inline-block;
     }
+
+    .animate-like {
+      transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .animate-like:active {
+      transform: scale(1.9);
+    }
     
     .blog-link:hover {
       color: #384299;
