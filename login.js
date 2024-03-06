@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (!password) {
-            errorMessage += "Password is required.<br>";
+            errorMessage += "Please enter the Password.<br>";
             validationPassed = false;
             document.getElementById("password").classList.add("input-error");
         }
