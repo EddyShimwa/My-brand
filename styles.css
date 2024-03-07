@@ -35,8 +35,6 @@ html {
     display: none;
   }
 
-
-
   .mobile-nav {
     margin: 0;
     padding: 50px 0;
@@ -152,7 +150,6 @@ html {
       opacity: 1;
     }
   }
-  
   .greeting-message {
     animation-name: slideInFromLeft;
     animation-duration: 1s;
@@ -249,12 +246,13 @@ html {
     position: relative; 
     background-color: #212121;
     border-radius: 10px;
-    padding: 20px;
-    color: white;
-    padding-bottom: 80px; 
+    padding: 12px;
+    color: rgb(255, 219, 129);
     display: flex;
     flex-direction: column; 
     justify-content: space-between; 
+    border: 1px solid #ffffff21;
+    margin-bottom: 12px;
   }
   
   .blog-actions {
@@ -264,6 +262,45 @@ html {
     bottom: 20px; 
     left: 20px; 
     width: calc(100% - 40px); 
+  }
+
+  .modal-content {
+    background-color: #272727;
+    margin: 6% auto; 
+    padding: 20px;
+    border: 1px solid #8888886e;
+    width: 70%; 
+    height: 80%;
+    overflow-y:unset;
+    overflow-x: hidden;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modalTitle {
+    color:hsl(36, 93%, 76%);
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  #modalDescription {
+    display: flex;
+    text-align: justify;
+    width: 80%;
+    margin: auto;
   }
   
   #work-item-techs {
@@ -634,6 +671,9 @@ html {
     font-weight: bold;
   }
   
+  .fa-comment:before {
+    margin-right: 4px;
+  }
 
   @media (min-width: 600px) {
     body {
@@ -808,7 +848,7 @@ html {
     .blog-item {
       background-color: #2a2a2a;
       border-radius: 10px;
-      padding: 20px;
+      padding: 12px;
       color: white;
     }
     
@@ -835,6 +875,10 @@ html {
       background-color: rgba(0, 0, 0, 1.665); 
     }
     
+    .fa-comment:before {
+      margin-right: 4px;
+    }
+
     .modal-content {
       background-color: #272727;
       margin: 6% auto; 
@@ -891,7 +935,8 @@ html {
       margin-top: 10px;
       font-size: 20px;
     }
-    
+
+
     .blog-item .blog-description {
       color: #dfdfdf;
       margin-top: 10px;
@@ -992,7 +1037,6 @@ html {
       padding-left: 15px;
     }
   
-  
     .connect {
       display: flex;
       justify-content: center;
@@ -1031,4 +1075,3 @@ html {
       border: none;
     }
   }
-

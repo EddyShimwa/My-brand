@@ -54,7 +54,8 @@ body {
 }
 
 .side-content {
-    height: calc(100vh - 60px);
+    margin-top: 20%;
+    height: 100vh;
     overflow: auto;
     background-color: #131313;
 }
